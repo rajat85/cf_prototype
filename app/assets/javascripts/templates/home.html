@@ -35,7 +35,7 @@
     <div class="col-md-3">
       <div class="sidebar-module">
         <h3><strong>Need Help getting started?</strong></h3>
-        <ol class="list-unstyled">
+        <ol class="list-unstyled left-nav-list">
           <li><a href="#">Read help docs</a></li>
           <li><a href="#">View example case studies</a></li>
           <li><a href="#">Watch training videos</a></li>
@@ -64,7 +64,7 @@
               </li>
             </ul>
           </div> <!-- end of alert success -->
-          <form role="form" class="css-form" name="vm.resourceForm" ng-submit="vm.save()">
+          <form role="form" class="css-form clearfix" name="vm.resourceForm" ng-submit="vm.save()">
             <div class="form-group">
               <textarea class="form-control" ng-required="true"
               ng-model="vm.resource.content" ng-maxlength="140" placeholder="Describe your data goals in a short summary."></textarea>
@@ -72,7 +72,7 @@
               <div class="hint" ng-class="{'alert-warning': vm.resource.content.length >= 120, 'alert-error': vm.resource.content.length >= 141 }">{{vm.resource.content.length || 0}} of 140.</div>
             </div>
             <div class="form-group">
-              <label>Attachment</label>
+              <label><strong>Attach a sample of your data(optional)</strong></label>
               <input type="file" class="file-inputs" ngf-select ng-model="vm.resource.attachment" />
             </div>
 
@@ -84,5 +84,9 @@
       </div>
     </div> <!-- end of right side rec form -->
   </div> <!-- end of row -->
+
+  <div class="row spacer">
+    <div class="col-xs-12"></div>
+  </div>
 
 </div> <!-- end of rec_container -->
